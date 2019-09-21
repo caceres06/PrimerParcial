@@ -261,7 +261,7 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  
+
     .post ul {
         list-style: none;
         display: flex;
@@ -275,11 +275,11 @@ footer .social-links {
         margin: 1rem 2rem;
         flex: 1 0 300px;
     }
-
-
-    .logo {
+/*agregando padding*/
+    img.logo {
         width: 150px;
-        margin: 1.5em;
+        margin-left: 13em;
+        padding:20px;
     }
 
     .show-desktop {
@@ -289,7 +289,7 @@ footer .social-links {
     .hide-desktop {
         display: none;
     }
-
+/* cambaindo el font-size y margin al menu*/
     .menu {
         background-color: #112935; 
         position: static;
@@ -297,7 +297,8 @@ footer .social-links {
         width: auto;
         height:auto;
         display: flex;
-        margin-top: 1em;
+        margin-right: 3em;
+        font-size:25px;
     }
 
 
@@ -308,9 +309,26 @@ footer .social-links {
 
 @media only screen and (min-width: 1024px) {
 
-    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em 5.5em 3.5em
+    }
+    .menu {
+        width: auto;
+        height: auto;
+        display: flex;
+        margin-top: 0;
+        font-size: 30px;
+        padding:0;
+        justify-content: space-between
+    }
+    .big-hero h2{
+        font-size: 40px;
+    }   
    .big-hero p{
        padding: 0;
+       font-size: 2.5em
    } 
    
    .social-links{
@@ -325,20 +343,56 @@ footer .social-links {
     }
     
     .fab{
-        padding:15px;
-        font-size: 0.8em
+        margin:10px;
+        font-size: 1.5em
     }
     .fas{
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
         color: #11e095;
-        font-size: 3.5em
+        font-size: 6.5em
     }
-    .post ul{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
+    
+    .post h2{
+        text-transform: uppercase;
+        font-weight: 700px;
+        font-size: 2.5em;
+        padding:20px
     }
-}
+    
+    .post ul li article h3{
+        font-size:14px
+    }
+    
+    .post ul li article p{
+        font-size: 10px
+    }
+/* se usa grid para dividir el container en dos columnas */
+    .about .container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+    }
+/* se usa span para agrupar las columnas y que h2 este en una sola*/
+    .about .container h2{
+        grid-area: span 1/ span 3;
+        font-size: 20px
+    }
+    .about .contact-form{
+        width: 75%;
+        font-weight:bold;
+        font-size:14px
+    }
+    .about .contact, .about .bio-info{
+        padding:1.5em;
+        align-items: center;
+        font-size: 1em
+    }
+    .about .contact-form input[type="submit"]{
+        width: 15em;
+        font-size:1.5rem;
+    }
+    footer p{
+        font-size: 1.5em;
+    }
 
 @media only screen and (min-width: 1440px) {
 
@@ -346,6 +400,7 @@ footer .social-links {
     .container {
         width: 80%;
         margin: 0 auto;
-        max-width: 1440px;
+        max-width: 1440px
     }
+}
 }
